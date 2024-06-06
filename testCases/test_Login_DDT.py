@@ -9,11 +9,12 @@ from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogGen
 import os
 
+
 class Test_Login_DDT:
     baseURL = ReadConfig.getApplicationURL()
     logger = LogGen.loggen()
 
-    path ="C:\\Users\\rasul\\PycharmProjects\\pythonProject\\OpencartV1\\pythonProject1\\testData\\Opencart_LoginData.xlsx"
+    path = "/testData/Opencart_LoginData.xlsx"
 
     @pytest.mark.regression
     def test_login_ddt(self, setup):
@@ -30,7 +31,7 @@ class Test_Login_DDT:
         self.loginPage = LoginPage(self.driver)
         self.myAccount = MyAccountPage(self.driver)
 
-        for r in range(2, self.rows+1):
+        for r in range(2, self.rows + 1):
             self.homePage.clickMyAccount()
             self.homePage.clickLogin()
 
@@ -62,23 +63,3 @@ class Test_Login_DDT:
         else:
             assert False
         self.logger.info("*****Login Date Driver Test Finished*****")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
