@@ -23,7 +23,8 @@ def setup(browser):
         from selenium.webdriver.chrome.service import Service
         serv_obj = Service()
         driver = webdriver.Chrome(service=serv_obj)
-    return driver
+    yield driver
+    driver.close()
 
 
 def pytest_addoption(parser):  # This will get the value from CLI
