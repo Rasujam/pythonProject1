@@ -9,15 +9,15 @@ from selenium import webdriver
 def setup(browser):
     if browser == "chrome":
         from selenium.webdriver.chrome.service import Service
-        serv_obj = Service("C:\Drivers\chromedriver-win64\chromedriver.exe")
+        serv_obj = Service()
         driver = webdriver.Chrome(service=serv_obj)
     elif browser == "edge":
         from selenium.webdriver.edge.service import Service
-        serv_obj = Service("C:\Drivers\edgedriver_win64\msedgedriver.exe")
+        serv_obj = Service()
         driver = webdriver.Edge(service=serv_obj)
     elif browser == "firefox":
         from selenium.webdriver.firefox.service import Service
-        serv_obj = Service("C:\Drivers\geckodriver-v0.34.0-win64\geckodriver.exe")
+        serv_obj = Service()
         driver = webdriver.Firefox(service=serv_obj)
     else:
         from selenium.webdriver.chrome.service import Service
@@ -37,18 +37,20 @@ def browser(request):
 
 # customizing reHTML Report
 # It is hook for Adding Environment info to HTML Report
-# def pytest_configure(config):
-#     config.metadata['Project Name'] = 'Opencart'
-#     config.metadata['Module Name'] = 'AccountRegistration'
-#     config.metadata['Tester Name'] = 'Pavan'
-
-
+@pytest.hookimpl(optionalhook=True)
+def pytest_html_results_summary(prefix, summary, postfix):
+    prefix.extend([extras.html('<p>Project Name: Orange HRM</p>')])
+    prefix.extend([extras.html('<p>Module Name: Login Module</p>')])
+    prefix.extend([extras.html('<p>Tester Name: Rasul</p>')])
 
 # It is hook for delete/Modify Environment info to HTML Report
-@pytest.hookimpl(optionalhook=True)
+@pytest.mark.optionalhook
 def pytest_metadata(metadata):
-    metadata.pop("JAVA_HOME", None)
-    metadata.pop("Plugins", None)
+    # metadata.pop("Python", None)
+    # metadata.pop("Platform", None)
+    metadata.pop("Plugins",None)
+    metadata.pop("JAVA_HOME",None)
+
 
 @pytest.hookimpl(tryfirst=True)
 def pytest_configure(config):
