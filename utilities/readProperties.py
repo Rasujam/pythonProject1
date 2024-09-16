@@ -1,9 +1,9 @@
 import configparser
 import os.path
-CONFIG_FILE_PATH = "C:\\Users\\rasul\\PycharmProjects\\pythonProject\\OpencartV1\\pythonProject1\\configurations\\config.ini"
+# CONFIG_FILE_PATH = "C:\\Users\\rasul\\PycharmProjects\\pythonProject\\OpencartV1\\pythonProject1\\configurations\\config.ini"
 
 config = configparser.RawConfigParser()
-config.read(CONFIG_FILE_PATH)
+config.read(os.path.abspath(os.curdir)+'\\configurations\\config.ini')
 
 
 class ReadConfig:
