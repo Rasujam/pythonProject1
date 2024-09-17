@@ -2085,3 +2085,23 @@
 2024-09-16 10:44:00,970 - urllib3.connectionpool - DEBUG - http://localhost:52239 "DELETE /session/bbea37874922b9b70eac2112208459b4 HTTP/1.1" 200 0
 2024-09-16 10:44:00,970 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
 2024-09-16 10:44:00,970 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2024-09-16 19:25:55,382 - WDM - INFO - ====== WebDriver manager ======
+2024-09-16 19:25:56,328 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-16 19:25:56,331 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-09-16 19:25:56,656 - urllib3.connectionpool - DEBUG - https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 7250
+2024-09-16 19:25:56,658 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2024-09-16 19:25:56,659 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-09-16 19:25:56,939 - urllib3.connectionpool - DEBUG - https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 7250
+2024-09-16 19:25:56,942 - WDM - INFO - Driver [C:\Users\rasul\.wdm\drivers\chromedriver\win64\128.0.6613.137\chromedriver-win32/chromedriver.exe] found in cache
+2024-09-16 19:25:56,943 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: C:\Users\rasul\.wdm\drivers\chromedriver\win64\128.0.6613.137\chromedriver-win32/chromedriver.exe
+2024-09-16 19:25:56,962 - selenium.webdriver.common.service - DEBUG - Started executable: `C:\Users\rasul\.wdm\drivers\chromedriver\win64\128.0.6613.137\chromedriver-win32/chromedriver.exe` in a child process with pid: 5692 using 0 to output -3
+2024-09-16 19:25:57,485 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53590/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'goog:chromeOptions': {'extensions': [], 'args': []}}}}
+2024-09-16 19:25:57,486 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:53590
+2024-09-16 19:25:58,086 - urllib3.connectionpool - DEBUG - http://localhost:53590 "POST /session HTTP/1.1" 200 0
+2024-09-16 19:25:58,087 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"128.0.6613.138","chrome":{"chromedriverVersion":"128.0.6613.137 (fe621c5aa2d6b987e964fb1b5066833da5fb613d-refs/branch-heads/6613@{#1711})","userDataDir":"C:\\Users\\rasul\\AppData\\Local\\Temp\\scoped_dir5692_2025285507"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:53593"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"27bbbdaf19ae4e0392ff446d7ced5375"}} | headers=HTTPHeaderDict({'Content-Length': '883', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-09-16 19:25:58,087 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2024-09-16 19:25:58,088 - root - INFO - **** Starting Login Data Driven Test
+2024-09-16 19:25:58,237 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://localhost:53590/session/27bbbdaf19ae4e0392ff446d7ced5375 {}
+2024-09-16 19:25:58,262 - urllib3.connectionpool - DEBUG - http://localhost:53590 "DELETE /session/27bbbdaf19ae4e0392ff446d7ced5375 HTTP/1.1" 200 0
+2024-09-16 19:25:58,262 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-09-16 19:25:58,262 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
